@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    eu.ibagroup: DEBUG
+    org.zalando.logbook: TRACE
+    org.springframework.web.client.RestTemplate: DEBUG
+    org.apache.http: DEBUG
+    httpclient.wire: DEBUG
+    org.springframework.security: DEBUG
+            
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          introspection-uri: http://localhost:8081/realms/TEST/protocol/openid-connect/token/introspect
+          client-id: ibagroup_test
+          client-secret: JGW2hUDJWQz32Ml5GdEfa8tnHOFol0dd
+      
+#        jwt:
+#          issuer-uri: http://localhost:8081/realms/TEST
+
+  mvc:
+    favicon:
+      enabled: false
