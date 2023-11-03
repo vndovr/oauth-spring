@@ -23,7 +23,7 @@ public class LoginController {
   private final AuthClient authClient;
   private final ObjectMapper objectMapper;
 
-  private String clientSecret = "JGW2hUDJWQz32Ml5GdEfa8tnHOFol0dd";
+  private String clientSecret = "BYwTqtbkLmUEC20D8KIqV1FJuLGyEJoP";
   
   @GetMapping(path = "/login")
   @Operation(description = "Perform the login - 1st step")
