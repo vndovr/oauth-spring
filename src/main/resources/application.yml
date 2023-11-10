@@ -23,7 +23,7 @@ spring:
         opaque-token:
           introspection-uri: http://localhost:8081/realms/TEST/protocol/openid-connect/token/introspect
           client-id: ibagroup_test
-          client-secret: BYwTqtbkLmUEC20D8KIqV1FJuLGyEJoP
+          client-secret: XBK1qFjD9iqBZn4AfkUs4BFiVwraSu47
       
         jwt:
           issuer-uri: http://localhost:8081/realms/TEST

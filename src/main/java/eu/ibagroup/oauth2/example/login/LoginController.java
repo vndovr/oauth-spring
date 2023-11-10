@@ -24,10 +24,10 @@ public class LoginController {
   private final AuthClient authClient;
   private final ObjectMapper objectMapper;
 
-  @Value("${spring.security.oauth2.resourceserver.opaque-token.client-id}")
+  @Value("${spring.security.oauth2.resourceserver.opaque-token.client-secret}")
   private String clientSecret;
   
-  @Value("${spring.security.oauth2.resourceserver.opaque-token.client-secret}")
+  @Value("${spring.security.oauth2.resourceserver.opaque-token.client-id}")
   private String clientId;
 
   @GetMapping(path = "/login")
