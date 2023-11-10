@@ -22,7 +22,7 @@ public class ApiController {
   private ObjectMapper objectMapper;
 
   @GetMapping(path = "/self", produces = "text/plain")
-  @Operation(description = "Call the API")
+  @Operation(description = "Call the API /self to get information about user")
   @SneakyThrows
   public ResponseEntity<String> log(Authentication authentication) {
     
@@ -38,7 +38,7 @@ public class ApiController {
 
 
   @GetMapping(path = "/manager")
-  @Operation(description = "Call the API")
+  @Operation(description = "Call the API that is accessible only by user with role MANAGER")
   @RolesAllowed("MANAGER")
   public ResponseEntity<String> manager() {
     log.info("Managers endpoint called");

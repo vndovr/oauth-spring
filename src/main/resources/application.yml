@@ -12,7 +12,11 @@ logging:
     httpclient.wire: DEBUG
     org.springframework.security: DEBUG
             
+# could be opaque or jwt - based on this selection the way application checks the tokens is determined
 spring:
+  profiles:
+    active: local, opaque  
+
   security:
     oauth2:
       resourceserver:
@@ -21,8 +25,8 @@ spring:
           client-id: ibagroup_test
           client-secret: BYwTqtbkLmUEC20D8KIqV1FJuLGyEJoP
       
-#        jwt:
-#          issuer-uri: http://localhost:8081/realms/TEST
+        jwt:
+          issuer-uri: http://localhost:8081/realms/TEST
 
   mvc:
     favicon:

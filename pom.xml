@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>eu.ibagroup.oauth2</groupId>
-	<artifactId>example</artifactId>
+	<artifactId>example-keycloak</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>

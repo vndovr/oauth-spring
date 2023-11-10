@@ -3,7 +3,10 @@ package eu.ibagroup.oauth2.example;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.core.DelegatingOAuth2TokenValidator;
@@ -18,8 +21,9 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
 
-//@Configuration
-//@EnableMethodSecurity(jsr250Enabled = true, prePostEnabled = true, securedEnabled = true)
+@Configuration
+@EnableMethodSecurity(jsr250Enabled = true, prePostEnabled = true, securedEnabled = true)
+@Profile("jwt")
 public class OAuth2SecurityConfigurationJwt {
 
   @Bean
